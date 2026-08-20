@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Donaciones</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <body>
+        <header>
+            <h1>Formulario de Registro de Donaciones</h1>
+
+            <p>
+                Registro de personas y empresas que deseen realizar
+                donaciones para apoyar a las personas afectadas por el sismo.
+            </p>
+        </header>
+
+        <nav>
+            <a href="index.html">
+            Volver al Boletín Informático</a>
+        </nav>
+
+        <main>
+
+            <h2>Reporte de Registro de Donaciones</h2>
+            <p>
+                Por favor, complete el siguiente formulario con la información requerida para registrar su donación.
+                Asegúrese de proporcionar datos precisos y completos para facilitar el proceso de entrega y distribución de los insumos donados.
+            </p>
+            <form method="post" enctype="multipart/form-data">
+
+                <fieldset>
+
+                    <legend>Información del donante</legend>
+
+                    <p>
+                        <label for="nombre">
+                            Nombre completo o razon social.
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            name="nombre" 
+                            minlength="3" 
+                            maxlength="60" 
+                            required
+                            placeholder="Ingrese su nombre completo o razon social">
+
+                        <br><br>
+                        <label for="Documento">
+                            Documento o NIT:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="Documento" 
+                            name="Documento" 
+                            minlength="6" 
+                            maxlength="10" 
+                            pattern="[0-9]{6,10}" 
+                            title="Debe contener solamente numeros y tener entre 6 y 10 digitos" 
+                            required
+                            placeholder="Ingrese su documento o NIT">
+                    
+                        <br><br>
+                        <label for="correo">
+                            Correo electrónico:
+                        </label>
+                        <input 
+                            type="email" 
+                            id="correo" 
+                            name="correo" 
+                            required
+                            placeholder="Ingrese su correo electrónico">
+                    
+                        <br><br>
+                        <label for="telefono">
+                            Teléfono de contacto:
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono" 
+                            pattern="3[0-9]{9}" 
+                            title="Debe contener solamente numeros y tener 10 digitos" 
+                            required
+                            placeholder="Ingrese su número de teléfono">
+                    
+                    </p>
+
+                </fieldset>
+
+                <br><br>
+
+                <fieldset>
+
+                    <legend>Información del Insumo</legend>
+
+                    <p>
+
+                        <label for="insumo">
+                            Tipo de insumo a donar:
+                        </label>
+
+                        <select 
+                            id="insumo" 
+                            name="insumo" 
+                            required
+                            placeholder="Seleccione un insumo">
+
+                            <option value="">Seleccione un insumo</option>
+                            <option value="alimentos">Alimentos no perecederos</option>
+                            <option value="aseo">Producto de aseo</option>
+                            <option value="ropa">Ropa y calzado</option>
+                            <option value="medicamentos">Medicamentos y suministros médicos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+
+                        <br><br>
+                        <label for="punto">
+                            Punto de acopio de entrega:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="punto" 
+                            name="punto" 
+                            list="puntos" 
+                            required
+                            placeholder="Seleccione un punto de acopio">
+
+                        <datalist id="puntos">
+                            <option value="Coliseo Municipal">
+                            <option value="Cruz Roja Local">
+                            <option value="Defensa Civil">
+                            <option value="Universidad">
+                            <option value="Centro Comunitario">
+                        </datalist>
+
+                        <br><br>
+                        <label for="direccion">
+                            Dirección de recolección:
+                        </label>
+                        <input 
+                            type="text" 
+                            id="direccion" 
+                            name="direccion" 
+                            maxlength="120" 
+                            required
+                            placeholder="Ingrese la dirección de recolección">
+
+                        <br><br>
+                        <label for="fecha">
+                            Fecha de entrega:
+                        </label>
+                        <input 
+                            type="date" 
+                            id="fecha" 
+                            name="fecha" 
+                            min="2026-08-19" 
+                            max="2026-09-18" 
+                            required
+                            placeholder="Seleccione una fecha">
+
+                        <br><br>
+                        <label for="peso">
+                            Peso aproximado de la donación (en kilogramos):
+                        </label>
+                        <input 
+                            type="number" 
+                            id="peso" 
+                            name="peso" 
+                            min="1" 
+                            max="100" 
+                            step="5" 
+                            required
+                            placeholder="Ingrese el peso aproximado de la donación">
+                    </p>
+                    
+                </fieldset>
+            
+            
+            </form>
+        </main>
+    </body>
+</html>
+
