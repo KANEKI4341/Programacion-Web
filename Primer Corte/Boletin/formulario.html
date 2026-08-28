@@ -4,186 +4,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Registro de Donaciones</title>
+</head>
 
-    <link rel="stylesheet" href="styles.css">
+<body>
 
-    <body>
-        <header>
-            <h1>Formulario de Registro de Donaciones</h1>
+    <header>
+        <h1>Formulario de Registro de Donaciones</h1>
 
-            <p>
-                Registro de personas y empresas que deseen realizar
-                donaciones para apoyar a las personas afectadas por el sismo.
-            </p>
-        </header>
+        <p>
+            Registro de personas y empresas que deseen realizar donaciones para apoyar a las personas afectadas por el sismo.
+        </p>
+    </header>
 
-        <nav>
-            <a href="index.html">
-            Volver al Boletín Informático</a>
-        </nav>
+    <nav>
+        <a href="index.html">Volver al Boletín Informativo</a>
+    </nav>
 
-        <main>
+    <main>
 
-            <h2>Reporte de Registro de Donaciones</h2>
-            <p>
-                Por favor, complete el siguiente formulario con la información requerida para registrar su donación.
-                Asegúrese de proporcionar datos precisos y completos para facilitar el proceso de entrega y distribución de los insumos donados.
-            </p>
-            <form method="post" enctype="multipart/form-data">
+        <h2>Registro de Donaciones</h2>
 
-                <fieldset>
+        <p>
+            Complete la información solicitada para registrar la entrega de insumos en los puntos de acopio habilitados.
+        </p>
 
-                    <legend>Información del donante</legend>
+        <form method="post" enctype="multipart/form-data">
 
-                    <p>
-                        <label for="nombre">
-                            Nombre completo o razon social.
-                        </label>
-                        <input 
-                            type="text" 
-                            id="nombre" 
-                            name="nombre" 
-                            minlength="3" 
-                            maxlength="60" 
-                            required
-                            placeholder="Ingrese su nombre completo o razon social">
+            <fieldset>
 
-                        <br><br>
-                        <label for="Documento">
-                            Documento o NIT:
-                        </label>
-                        <input 
-                            type="text" 
-                            id="Documento" 
-                            name="Documento" 
-                            minlength="6" 
-                            maxlength="10" 
-                            pattern="[0-9]{6,10}" 
-                            title="Debe contener solamente numeros y tener entre 6 y 10 digitos" 
-                            required
-                            placeholder="Ingrese su documento o NIT">
-                    
-                        <br><br>
-                        <label for="correo">
-                            Correo electrónico:
-                        </label>
-                        <input 
-                            type="email" 
-                            id="correo" 
-                            name="correo" 
-                            required
-                            placeholder="Ingrese su correo electrónico">
-                    
-                        <br><br>
-                        <label for="telefono">
-                            Teléfono de contacto:
-                        </label>
-                        <input 
-                            type="tel" 
-                            id="telefono" 
-                            name="telefono" 
-                            pattern="3[0-9]{9}" 
-                            title="Debe contener solamente numeros y tener 10 digitos" 
-                            required
-                            placeholder="Ingrese su número de teléfono">
-                    
-                    </p>
+                <legend>Información del Donante</legend>
 
-                </fieldset>
+                <label for="nombre">
+                    Nombre completo o razón social:
+                </label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    minlength="3"
+                    maxlength="60"
+                    required
+                    placeholder="Ingrese su nombre o razón social">
 
                 <br><br>
 
-                <fieldset>
+                <label for="documento">
+                    Documento o NIT:
+                </label>
+                <input
+                    type="text"
+                    id="documento"
+                    name="documento"
+                    pattern="[0-9]{6,10}"
+                    title="Debe contener únicamente números y tener entre 6 y 10 dígitos"
+                    required
+                    placeholder="Ingrese documento o NIT">
 
-                    <legend>Información del Insumo</legend>
+                <br><br>
 
-                    <p>
+                <label for="correo">
+                    Correo electrónico:
+                </label>
+                <input
+                    type="email"
+                    id="correo"
+                    name="correo"
+                    title="Ingrese un correo electrónico válido"
+                    required
+                    placeholder="Ingrese su correo electrónico">
 
-                        <label for="insumo">
-                            Tipo de insumo a donar:
-                        </label>
+                <br><br>
 
-                        <select 
-                            id="insumo" 
-                            name="insumo" 
-                            required
-                            placeholder="Seleccione un insumo">
+                <label for="telefono">
+                    Teléfono de contacto:
+                </label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    pattern="3[0-9]{9}"
+                    title="El número de teléfono debe comenzar con '3' y tener 10 dígitos adicionales."
+                    required
+                    placeholder="Ingrese su teléfono">
 
-                            <option value="">Seleccione un insumo</option>
-                            <option value="alimentos">Alimentos no perecederos</option>
-                            <option value="aseo">Producto de aseo</option>
-                            <option value="ropa">Ropa y calzado</option>
-                            <option value="medicamentos">Medicamentos y suministros médicos</option>
-                            <option value="otro">Otro</option>
-                        </select>
+            </fieldset>
 
-                        <br><br>
-                        <label for="punto">
-                            Punto de acopio de entrega:
-                        </label>
-                        <input 
-                            type="text" 
-                            id="punto" 
-                            name="punto" 
-                            list="puntos" 
-                            required
-                            placeholder="Seleccione un punto de acopio">
+            <br><br>
 
-                        <datalist id="puntos">
-                            <option value="Coliseo Municipal">
-                            <option value="Cruz Roja Local">
-                            <option value="Defensa Civil">
-                            <option value="Universidad">
-                            <option value="Centro Comunitario">
-                        </datalist>
+            <fieldset>
 
-                        <br><br>
-                        <label for="direccion">
-                            Dirección de recolección:
-                        </label>
-                        <input 
-                            type="text" 
-                            id="direccion" 
-                            name="direccion" 
-                            maxlength="120" 
-                            required
-                            placeholder="Ingrese la dirección de recolección">
+                <legend>Información del Insumo</legend>
 
-                        <br><br>
-                        <label for="fecha">
-                            Fecha de entrega:
-                        </label>
-                        <input 
-                            type="date" 
-                            id="fecha" 
-                            name="fecha" 
-                            min="2026-08-19" 
-                            max="2026-09-18" 
-                            required
-                            placeholder="Seleccione una fecha">
+                <label for="insumo">
+                    Tipo de insumo:
+                </label>
 
-                        <br><br>
-                        <label for="peso">
-                            Peso aproximado de la donación (en kilogramos):
-                        </label>
-                        <input 
-                            type="number" 
-                            id="peso" 
-                            name="peso" 
-                            min="1" 
-                            max="100" 
-                            step="5" 
-                            required
-                            placeholder="Ingrese el peso aproximado de la donación">
-                    </p>
+                <select id="insumo" name="insumo" required>
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <optgroup label="Alimentos">
+                        <option value="enlatados">Enlatados</option>
+                        <option value="granos">Granos</option>
+                        <option value="agua">Agua potable</option>
+                    </optgroup>
+
+                    <optgroup label="Aseo">
+                        <option value="jabon">Jabón</option>
+                        <option value="desinfectante">Desinfectante</option>
+                        <option value="papel">Papel higiénico</option>
+                    </optgroup>
+
+                    <optgroup label="Abrigo">
+                        <option value="ropa">Ropa</option>
+                        <option value="cobijas">Cobijas</option>
+                        <option value="calzado">Calzado</option>
+                    </optgroup>
+
+                    <optgroup label="Otros">
+                        <option value="otros">Otros</option>
+                    </optgroup>
+
+                </select>
+
+                <br><br>
+
+                <label for="punto">
+                    Punto de acopio de entrega:
+                </label>
+
+                <input
+                    type="text"
+                    id="punto"
+                    name="punto"
+                    list="puntos"
+                    required
+                    placeholder="Seleccione o escriba un punto">
+
+                <datalist id="puntos">
+                    <option value="Coliseo Municipal">
+                    <option value="Defensa Civil">
+                    <option value="Cruz Roja">
+                    <option value="Universidad Popular del Cesar">
+                    <option value="Centro Comunitario">
+                </datalist>
+
+                <br><br>
+
+                <label for="direccion">
+                    Dirección de recolección:
+                </label>
+
+                <input
+                    type="text"
+                    id="direccion"
+                    name="direccion"
+                    maxlength="120"
+                    required
+                    placeholder="Ingrese la dirección">
+
+                <br><br>
+
+                <label for="fecha">
+                    Fecha de entrega:
+                </label>
+
+                <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    min="2026-08-21"
+                    max="2026-09-20"
+                    required>
+
+                <br><br>
+
+                <label for="peso">
+                    Peso aproximado del lote (kg):
+                </label>
+
+                <input
+                    type="range"
+                    id="peso"
+                    name="peso"
+                    min="1"
+                    max="100"
+                    step="5"
+                    value="50">
+
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+
+                <legend>Entrega y Documentación</legend>
+
+                <p>Servicios que requiere:</p>
+
+                <input 
+                    type="checkbox" 
+                    id="transporte" 
+                    name="servicios" 
+                    value="transporte">
+
+                <label for="transporte">Transporte</label>
+
+                <input 
+                    type="checkbox" 
+                    id="embalaje" 
+                    name="servicios" 
+                    value="embalaje">
+
+                <label for="embalaje">Embalaje</label>
+
+                <input 
+                    type="checkbox" 
+                    id="certificado" 
+                    name="servicios" 
+                    value="certificado">
+
+                <label for="certificado">Certificado de donación</label>
+
+                <input 
+                    type="checkbox" 
+                    id="descargue" 
+                    name="servicios" 
+                    value="descargue">
                     
-                </fieldset>
-            
-            
-            </form>
-        </main>
-    </body>
-</html>
+                <label for="descargue">Personal de descargue</label>
 
+                <br><br>
+
+                <label for="cantidad">
+                    Cantidad de unidades o bultos:
+                </label>
+
+                <input
+                    type="number"
+                    id="cantidad"
+                    name="cantidad"
+                    min="0"
+                    required>
+
+                <br><br>
+
+                <p>Forma de entrega:</p>
+
+                <input
+                    type="radio"
+                    id="lleva"
+                    name="entrega"
+                    value="lleva"
+                    required>
+                <label for="lleva">La lleva</label>
+
+                <input
+                    type="radio"
+                    id="recogen"
+                    name="entrega"
+                    value="recogen">
+                <label for="recogen">La recogen</label>
+
+                <input
+                    type="radio"
+                    id="transportadora"
+                    name="entrega"
+                    value="transportadora">
+                <label for="transportadora">
+                    La envía por transportadora
+                </label>
+
+                <br><br>
+
+                <label for="detalle">
+                    Detalle del contenido:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="detalle"
+                    name="detalle"
+                    maxlength="400"
+                    rows="5"
+                    cols="50"
+                    required
+                    placeholder="Describa el contenido de la donación">
+                </textarea>
+
+                <br><br>
+
+                <label for="soporte">
+                    Soporte (foto del lote o factura):
+                </label>
+
+                <input
+                    type="file"
+                    id="soporte"
+                    name="soporte"
+                    accept=".jpg,.jpeg,.png,.pdf">
+
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+
+                <legend>Autorización y Registro</legend>
+
+                <label for="tipoDonante">
+                    Tipo de donante:
+                </label>
+
+                <select
+                    id="tipoDonante"
+                    name="tipoDonante"
+                    required>
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <option value="natural">
+                        Natural
+                    </option>
+
+                    <option value="juridica">
+                        Jurídica
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <input
+                    type="checkbox"
+                    id="autorizacion"
+                    name="autorizacion"
+                    required>
+
+                <label for="autorizacion">
+                    Autorizo el tratamiento de datos personales conforme a la Ley 1581 de 2012.
+                </label>
+
+                <br><br>
+
+                <input type="submit" value="Enviar Registro">
+
+                <input type="reset" value="Limpiar Formulario">
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

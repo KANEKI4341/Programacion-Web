@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Ciudadano de Afectación</title>
+</head>
+<body>
+
+    <header>
+        <h1>REPORTE CIUDADANO DE AFECTACIÓN</h1>
+        <p>
+            Este formulario permite a los ciudadanos reportar afectaciones
+            causadas por el sismo del 19 de agosto de 2026.
+        </p>
+    </header>
+
+    <nav>
+        <a href="index.html">Volver al Boletín Informático</a>
+    </nav>
+
+    <main>
+
+        <h2>Formulario de Reporte</h2>
+
+        <p>
+            Complete la información solicitada para registrar la viviendas que ah sido afectada por el sismo. 
+        </p>
+
+        <form method="post" enctype="multipart/form-data">
+
+            <fieldset>
+
+                <legend>Información del Reporte</legend>
+
+                <label for="nombre">
+                    Nombre completo del ciudadano que reporta la afectación:
+
+                </label>
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    name="nombre" 
+                    minlength="3"
+                    maxlength="60"
+                    required
+                    placeholder="Ingrese su nombre completo">
+
+                <br><br>
+
+                <label for="Numero de Documento">
+                    Número de documento de identidad:
+                </label>
+                <input 
+                    type="text" 
+                    id="Documento" 
+                    name="Documento" 
+                    pattern="3[0-9]{6,10}"
+                    required
+                    placeholder="Ingrese su número de documento">
+
+                <br><br>
+
+                <label for="Correo Electrónico">
+                    Correo electrónico:
+                </label>
+                <input 
+                    type="email" 
+                    id="Correo" 
+                    name="Correo" 
+                    required
+                    placeholder="Ingrese su correo electrónico">
+
+                <br><br>
+
+                <label for="Celular"
+                    >Número de celular:
+                </label>
+                <input
+                    type="tel"
+                    id="Celular"
+                    name="Celular"
+                    pattern="3[0-9]{10}"
+                    title="El número de celular debe comenzar con '3' y tener 10 dígitos adicionales."
+                    required
+                    placeholder="Ingrese su número de celular">
+
+            </fieldset>
+
+            <br><br>
+
+            <fieldset>
+
+                <legend>Ubicación y Descripción</legend>
+
+                <label for="Departamento"
+                    >Departamento:
+                </label>
+                
+                <select id="Departamento" name="Departamento" required>
+                    
+                    <option value="">
+                        Seleccione un departamento
+                    </option>
+
+                    <optgroup label="Valle del Cauca">
+                        <option value="Cali">Cali</option>
+                        <option value="Palmira">Palmira</option>
+                        <option value="Buenaventura">Buenaventura</option>
+                    </optgroup>
+
+                    <optgroup label="Risaralda">
+                        <option value="Pereira">Pereira</option>
+                        <option value="Dosquebradas">Dosquebradas</option>
+                        <option value="La Virginia">La Virginia</option>
+                    </optgroup>
+
+                    <optgroup label="Cauca">
+                        <option value="Popayán">Popayán</option>
+                        <option value="Santander de Quilichao">Santander de Quilichao</option>
+                        <option value="Puerto Tejada">Puerto Tejada</option>
+                    </optgroup>
+
+                    <optgroup label="Nariño">
+                        <option value="Pasto">Pasto</option>
+                        <option value="Ipiales">Ipiales</option>
+                        <option value="Tumaco">Tumaco</option>
+                    </optgroup>
+
+                </select>
+
+                <br><br>
+
+                <label for="Municipio"
+                    >Municipio:
+                </label>
+                <input 
+                    type="text" 
+                    id="Municipio" 
+                    name="Municipio" 
+                    required
+                    placeholder="Ingrese el municipio">
+
+                <br><br>
+
+                <label for="Dirección"
+                    >Dirección exacta de la vivienda afectada:
+                </label>
+                <input 
+                    type="text" 
+                    id="Dirección" 
+                    name="Dirección" 
+                    maxlength="120"
+                    required
+                    placeholder="Ingrese la dirección exacta">
+
+                <br><br>
+
+                <label for="fechaHora">
+                    Fecha y hora en que sintió el sismo:
+                </label>
+
+                <input
+                    type="datetime-local"
+                    id="fechaHora"
+                    name="fechaHora"
+                    max="2026-08-21T13:50"
+                    required>
+
+                <br><br>
+
+                <label for="Intensidad Percibida ">
+                    Intensidad percibida del sismo (escala de 1 a 12):
+                </label>
+
+                <input
+                    type="range"
+                    id="Intensidad"
+                    name="Intensidad"
+                    min="1"
+                    max="12"
+                    step="1"
+                    value="1"
+                    required>
+
+                <br><br>
+
+                <label for="Tipo de Afectacion">
+                    Tipo de afectación de la vivienda:
+                </label>
+
+                <select
+                    id="TipoAfectacion"
+                    name="TipoAfectacion"
+                    required>
+
+                    <option value="">
+                        Seleccione un tipo de afectación
+                    </option>
+
+                    <option value="Grieta">
+                        Grieta
+                    </option>
+
+                    <option value="Caida de Muros">
+                        Caida de Muros
+                    </option>
+
+                    <option value="Servicios Publicos">
+                        Servicios Publicos
+                    </option>
+
+                    <option value="Vias">
+                        Vias
+                    </option>
+
+                    <option value="Ninguna">
+                        Ninguna
+                    </option>
+
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Civiles Afectados</legend>
+
+                <label for="Personas">
+                    Número de personas afectadas en la vivienda:
+                </label>
+
+                <input
+                    type="number"
+                    id="Personas"
+                    name="Personas"
+                    min="0"
+                    required
+                    placeholder="Ingrese el número de personas afectadas">
+
+                <br><br>
+
+                <label for="Nivel de atención requerido">
+                    Nivel de atención requerido:
+                </label>
+
+                <select
+                    id="NivelAtencion"
+                    name="NivelAtencion"
+                    required>
+
+                    <option value="">
+                        Seleccione un nivel de atención
+                    </option>
+
+                    <option value="Alta">
+                        Alta
+                    </option>
+
+                    <option value="Medio">
+                        Medio
+                    </option>
+
+                    <option value="Bajo">
+                        Bajo
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <label for="Descripcion de Daño"
+                    >Descripción detallada del daño:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="Descripcion"
+                    name="Descripcion"
+                    rows="4"
+                    cols="50"
+                    maxlength="500"
+                    required
+                    placeholder="Ingrese una descripción detallada del daño">
+                </textarea>
+
+            <br><br>
+
+                <label for="Foto de la vivienda">
+                    Foto de la vivienda afectada (opcional):
+                </label>
+
+                <input
+                    type="file"
+                    id="Foto"
+                    name="Foto"
+                    accept="image/*">
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Autorización y Registro</legend>
+
+                <label for="tipoDonante">
+                    Tipo de donante:
+                </label>
+
+                <select
+                    id="tipoDonante"
+                    name="tipoDonante"
+                    required>
+
+                    <option value="">
+                        Seleccione una opción
+                    </option>
+
+                    <option value="natural">
+                        Natural
+                    </option>
+
+                    <option value="juridica">
+                        Jurídica
+                    </option>
+
+                </select>
+
+                <br><br>
+
+                <input
+                    type="checkbox"
+                    id="autorizacion"
+                    name="autorizacion"
+                    required>
+
+                <label for="autorizacion">
+                    Autorizo el tratamiento de datos personales conforme a la Ley 1581 de 2012.
+                </label>
+
+                <br><br>
+
+                <input type="submit" value="Enviar Registro">
+
+                <input type="reset" value="Limpiar Formulario">
+
+            </fieldset>
+
+        </form>
+
+    </main>
+
+</body>
+</html>
