@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>TAREA</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tarea practica</h1>
+        <p>
+            taller para paracticar
+        </p>
+    </header>
+
+    <nav>
+        <a href="index.html" target="_blank">Pajina anterior</a>
+    </nav>
+
+    <main>
+
+        <fieldset>
+
+            <legend>
+                Pedir datos
+            </legend>
+
+            <label for="nombre">
+                Nombre
+            </label>
+            
+            <input 
+                type="text"
+                name="nombre"
+                id="nombre"
+                required
+                title="llenar esta casilla"
+                placeholder="Nombre completo">
+
+            <br><br>
+
+            <label for="documento">
+                Documento
+            </label>
+
+            <input 
+                type="text"
+                name="documento"
+                id="documento"
+                required
+                title="Llenar esta casilla"
+                placeholder="Documento completo">
+
+            <br><br>
+
+            <lavel for="correo">
+                Correo
+            </lavel>
+
+            <input
+                type="email"
+                name="correo"
+                id="correo"
+                required
+                title="Llenar esta casilla"
+                placeholder="Correo completo">
+
+            <br><br>
+
+            <lavel for="fecha">
+                Fecha de  Nacimiento
+            </lavel>
+            
+            <input 
+                type="date"
+                name="fecha"
+                id="fecha"
+                required>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>
+                Datos Familiares
+            </legend>
+
+            <label for="integrantes">
+                Cuantos integrante hay en la familia
+            </label>
+
+            <input 
+                type="number"
+                name="integrantes"
+                id="integrantes"
+                required>
+
+            <br>
+
+            <p>Tiene hijo</p>
+
+            <label for="si">
+                Si
+            </label>
+
+            <input 
+                type="radio" 
+                name="si" 
+                id="si">
+
+            <label for="no">
+                No
+            </label>
+
+            <input
+                type="radio"
+                name="no"
+                id="no">
+
+            <p>Tiene mascota en casa:</p>
+
+            <label for="perro">
+                Perro
+            </label>
+
+            <input
+                type="checkbox"
+                name="perro"
+                id="perro">
+
+            <label for="gato ">
+                Gato
+            </label>
+
+            <input 
+                type="checkbox"
+                name="gato"
+                id="gato">
+
+            <label for="hamster">
+                Hamster
+            </label>
+
+            <input
+                type="checkbox"
+                name="hamster"
+                id="hamster">
+
+            <br><br>
+
+            <label for="departamento">
+                Departamento donde vive
+            </label>
+
+            <select 
+                name="departamento"
+                id="departamento"
+                required>
+
+                <option>
+                    Seleccione un departamento
+                </option>
+
+                <optgroup label = "Cesar">
+
+                    <option values = "Aguachica">
+                        Aguachica
+                    </option>
+                    <option values = "Ocaña">
+                        Ocaña
+                    </option>
+
+                </optgroup>
+
+                <optgroup label = "Antioquia">
+
+                    <option values = "Medellin">
+                        Medellin
+                    </option>
+
+                    <option values = "Envigado">
+                        Envigado
+                    </option>
+
+                </optgroup>
+
+                <optgroup label = "Santader">
+
+                    <option values = "Bucaramanga">
+                        Bucaramanga
+                    </option>
+
+                    <option values = "Floridablanca">
+                        Floridablanca
+                    </option>
+
+                </optgroup>
+               
+        </fieldset>
+
+    </main>
+</body>
+
+</html>
+    
